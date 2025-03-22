@@ -21,7 +21,7 @@ body {
    
 }
 
-.title {
+.title {  /* just trying to get a nice centralised header */
     font-size: large;
     text-align: center;
     margin: 0 auto;
