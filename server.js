@@ -11,13 +11,15 @@ app.use(express.static(__dirname))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
-// Tells us the server is running and on what port
-var server = app.listen(3000, () => {
-    console.log('server is listening on port', server.address().port)
-})
 
-// Tells us when someone connects
+// Tells us when someone connects, when it works, which isn't often
 io.on('connection', (socket) => { 
     console.log('a user connected')
 })
 
+
+
+// sets the server to listen to port 3000 and notifies us that it is doing so
+var server = app.listen(3000, () => {
+    console.log('server is listening on port', server.address().port)
+})

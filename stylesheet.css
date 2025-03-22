@@ -1,15 +1,24 @@
 /* SIT323 2.1P - Ryan Speirs */
 
+hml, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: aliceblue;
+    display: flex;      /* added flex-boxing to get a nicer layout, but not sure if best idea. */
+    flex-direction: column;  
+    justify-content: space-between;
 }
 
-.titleparent {
-    display: flex;
+
+.titleparent {  /* added this to fill to make it easier for the title box to be maniupulated witohut disrupting the body*/
+    display: flex;          /* This seems to be working */
     justify-content: center;  /* Horizontally centers */
     align-items: center;      /* Vertically centers */
-    height: 100vh;            /* Makes the parent container take the full height of the viewport */
+   
 }
 
 .title {
@@ -18,3 +27,26 @@ body {
     margin: 0 auto;
     width: 50%;
 }
+
+.core {  /* just made this up to dfferentiate between the body of the page and the body of the page content */
+    margin: 0 auto;
+    width: 75%;
+    flex-grow: 1; 
+    height: 80vh;
+}
+
+footer {
+    background-color: lightgrey;
+    color: gery;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top:auto;
+  }
+  
+  footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
